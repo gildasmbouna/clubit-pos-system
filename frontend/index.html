@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Club IT POS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Club IT POS System</h1>
+
+  <div class="columns">
+    <!-- POS Column -->
+    <section class="column" id="pos">
+      <h2>POS</h2>
+      <div id="menuButtons"></div>
+
+      <div class="quantity-control">
+        <button id="decrease">-</button>
+        <span id="quantity">1</span>
+        <button id="increase">+</button>
+      </div>
+
+      <label for="table">Table #</label>
+      <input type="number" id="table" placeholder="Enter table #" />
+
+      <div class="buttons">
+        <button id="send">Send to Kitchen</button>
+      </div>
+    </section>
+
+    <!-- Kitchen Ticket Column -->
+    <section class="column" id="kitchen">
+      <h2>Kitchen Ticket</h2>
+      <button id="refreshOrders">🔄 Refresh Orders</button>
+      <ul id="kitchenOrders"></ul>
+    </section>
+
+    <!-- Manager Inventory Dashboard Column -->
+<section class="column" id="manager">
+  <h2>Manager Inventory Dashboard</h2>
+
+  <div id="managerLogin">
+    <input type="password" id="managerPassword" placeholder="Enter password" />
+    <button id="loginBtn">Login</button>
+    <p id="loginMsg" style="color: red;"></p>
+  </div>
+
+  <div id="managerPanel" style="display: none;">
+    <form id="addItemForm">
+      <input type="text" id="newName" placeholder="Item name" required />
+      <input type="number" id="newStock" placeholder="Stock" required />
+      <button type="submit">Add Item</button>
+    </form>
+
+    <div class="filter-export">
+      <input type="text" id="filterInput" placeholder="Filter by name..." />
+      <button id="exportBtn">📤 Export CSV</button>
+    </div>
+
+    <ul id="inventoryList"></ul>
+  </div>
+</section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

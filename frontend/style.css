@@ -1,0 +1,131 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  color: #222;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.columns {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#menuButtons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.menu-button {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+/* POS Button Color Variants */
+.menu-soda { background-color: #5bc0de; }
+.menu-coffee { background-color: #795548; }
+.menu-beer { background-color: #f0ad4e; }
+.menu-wings { background-color: #d9534f; }
+.menu-nachos { background-color: #f39c12; }
+.menu-salad { background-color: #5cb85c; }
+.menu-steak { background-color: #8e44ad; }
+.menu-chicken { background-color: #34495e; }
+.menu-plantains { background-color: #e67e22; }
+.menu-tilapia { background-color: #3498db; }
+
+.menu-button:hover {
+  opacity: 0.85;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.quantity-control button {
+  padding: 8px 12px;
+  font-size: 18px;
+  background-color: #e6e6e6;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#quantity {
+  font-size: 18px;
+  width: 30px;
+  text-align: center;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 10px;
+}
+
+#send {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#send:hover {
+  background-color: #3a78c2;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-left: 10px;
+  color: white;
+}
+
+.badge.green { background-color: #4CAF50; }
+.badge.yellow { background-color: #FFC107; }
+.badge.red { background-color: #F44336; }
